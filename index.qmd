@@ -494,11 +494,11 @@ Include percentage improvements over linear regression for each random forest mo
 
 - [ ] Forked starter repository from [https://github.com/flyaflya/randomForestChallenge.git](https://github.com/flyaflya/randomForestChallenge.git)
 - [ ] Cloned repository locally using Cursor (or VS Code)
-- [ ] Completed all three analysis sections with visualizations
-- [ ] Document rendered to HTML successfully
-- [ ] HTML files uploaded to your forked repository
-- [ ] GitHub Pages enabled and working
-- [ ] Site accessible at `https://[your-username].github.io/randomForestChallenge/`
+- [x] Completed all three analysis sections with visualizations 
+- [x] Document rendered to HTML successfully
+- [x] HTML files uploaded to your forked repository
+- [x] GitHub Pages enabled and working
+- [x] Site accessible at https://sasplen.github.io/randomForestChallenge/
 
 **75% Grade Requirements:**
 
