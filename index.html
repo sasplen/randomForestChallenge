@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.24">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -61,14 +61,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="index_files/libs/clipboard/clipboard.min.js"></script>
 <script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
 <script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="index_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="index_files/libs/quarto-html/popper.min.js"></script>
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="index_files/libs/quarto-html/anchor.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -107,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📊 Challenge Requirements In <a href="#student-analysis-section">Student Analysis Section</a>
+<span class="screen-reader-only">Important</span>📊 Challenge Requirements In <a href="#student-analysis-section">Student Analysis Section</a>
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -120,7 +121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🎯 Note on Python Usage
+<span class="screen-reader-only">Important</span>🎯 Note on Python Usage
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -138,7 +139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-⚠️ AI Partnership Required
+<span class="screen-reader-only">Warning</span>⚠️ AI Partnership Required
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -161,7 +162,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(tidyverse))</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(randomForest))</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -176,15 +177,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">zipCode =</span> <span class="fu">as.factor</span>(zipCode)) <span class="sc">%&gt;%</span></span>
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>()</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Data prepared with zipCode as categorical variable</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Data prepared with zipCode as categorical variable</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Data prepared with zipCode as categorical variable</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Number of unique zip codes:"</span>, <span class="fu">length</span>(<span class="fu">unique</span>(model_data<span class="sc">$</span>zipCode)), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Number of unique zip codes:"</span>, <span class="fu">length</span>(<span class="fu">unique</span>(model_data<span class="sc">$</span>zipCode)), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Number of unique zip codes: 25 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Split data</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Split data</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>train_indices <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(model_data), <span class="fl">0.8</span> <span class="sc">*</span> <span class="fu">nrow</span>(model_data))</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>train_data <span class="ot">&lt;-</span> model_data[train_indices, ]</span>
@@ -198,12 +199,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>rf_500 <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(SalePrice <span class="sc">~</span> ., <span class="at">data =</span> train_data, <span class="at">ntree =</span> <span class="dv">500</span>, <span class="at">mtry =</span> <span class="dv">3</span>, <span class="at">seed =</span> <span class="dv">123</span>)</span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>rf_1000 <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(SalePrice <span class="sc">~</span> ., <span class="at">data =</span> train_data, <span class="at">ntree =</span> <span class="dv">1000</span>, <span class="at">mtry =</span> <span class="dv">3</span>, <span class="at">seed =</span> <span class="dv">123</span>)</span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>rf_2000 <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(SalePrice <span class="sc">~</span> ., <span class="at">data =</span> train_data, <span class="at">ntree =</span> <span class="dv">2000</span>, <span class="at">mtry =</span> <span class="dv">3</span>, <span class="at">seed =</span> <span class="dv">123</span>)</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>rf_5000 <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(SalePrice <span class="sc">~</span> ., <span class="at">data =</span> train_data, <span class="at">ntree =</span> <span class="dv">5000</span>, <span class="at">mtry =</span> <span class="dv">3</span>, <span class="at">seed =</span> <span class="dv">123</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>rf_5000 <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(SalePrice <span class="sc">~</span> ., <span class="at">data =</span> train_data, <span class="at">ntree =</span> <span class="dv">5000</span>, <span class="at">mtry =</span> <span class="dv">3</span>, <span class="at">seed =</span> <span class="dv">123</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestRegressor</span>
@@ -239,7 +240,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>rf_5000 <span class="op">=</span> RandomForestRegressor(n_estimators<span class="op">=</span><span class="dv">5000</span>, max_features<span class="op">=</span><span class="dv">3</span>, random_state<span class="op">=</span><span class="dv">123</span>)</span>
 <span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Fit all models</span></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>rf_1.fit(X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>rf_1.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <style>#sk-container-id-1 {
   /* Definition of color scheme common for light and dark mode */
@@ -421,7 +422,9 @@ clickable and can be expanded/collapsed.
 /* Toggleable content - dropdown */
 
 #sk-container-id-1 div.sk-toggleable__content {
-  display: none;
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
   text-align: left;
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
@@ -447,9 +450,9 @@ clickable and can be expanded/collapsed.
 
 #sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
-  display: block;
-  width: 100%;
-  overflow: visible;
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
 }
 
 #sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
@@ -654,217 +657,9 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-
-.estimator-table summary {
-    padding: .5rem;
-    font-family: monospace;
-    cursor: pointer;
-}
-
-.estimator-table details[open] {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
-    padding-bottom: 0.3rem;
-}
-
-.estimator-table .parameters-table {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.estimator-table .parameters-table tr:nth-child(odd) {
-    background-color: #fff;
-}
-
-.estimator-table .parameters-table tr:nth-child(even) {
-    background-color: #f6f6f6;
-}
-
-.estimator-table .parameters-table tr:hover {
-    background-color: #e0e0e0;
-}
-
-.estimator-table table td {
-    border: 1px solid rgba(106, 105, 104, 0.232);
-}
-
-.user-set td {
-    color:rgb(255, 94, 0);
-    text-align: left;
-}
-
-.user-set td.value pre {
-    color:rgb(255, 94, 0) !important;
-    background-color: transparent !important;
-}
-
-.default td {
-    color: black;
-    text-align: left;
-}
-
-.user-set td i,
-.default td i {
-    color: black;
-}
-
-.copy-paste-icon {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTIwOCAwTDMzMi4xIDBjMTIuNyAwIDI0LjkgNS4xIDMzLjkgMTQuMWw2Ny45IDY3LjljOSA5IDE0LjEgMjEuMiAxNC4xIDMzLjlMNDQ4IDMzNmMwIDI2LjUtMjEuNSA0OC00OCA0OGwtMTkyIDBjLTI2LjUgMC00OC0yMS41LTQ4LTQ4bDAtMjg4YzAtMjYuNSAyMS41LTQ4IDQ4LTQ4ek00OCAxMjhsODAgMCAwIDY0LTY0IDAgMCAyNTYgMTkyIDAgMC0zMiA2NCAwIDAgNDhjMCAyNi41LTIxLjUgNDgtNDggNDhMNDggNTEyYy0yNi41IDAtNDgtMjEuNS00OC00OEwwIDE3NmMwLTI2LjUgMjEuNS00OCA0OC00OHoiLz48L3N2Zz4=);
-    background-repeat: no-repeat;
-    background-size: 14px 14px;
-    background-position: 0;
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    cursor: pointer;
-}
-</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=1, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked=""><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
-        <div class="estimator-table">
-            <details>
-                <summary>Parameters</summary>
-                
-<table class="parameters-table caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<tbody>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">n_estimators&nbsp;</td>
-<td class="value">1</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">criterion&nbsp;</td>
-<td class="value">'squared_error'</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_depth&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_samples_split&nbsp;</td>
-<td class="value">2</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_samples_leaf&nbsp;</td>
-<td class="value">1</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_weight_fraction_leaf&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">max_features&nbsp;</td>
-<td class="value">3</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">max_leaf_nodes&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_impurity_decrease&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">bootstrap&nbsp;</td>
-<td class="value">True</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">oob_score&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">n_jobs&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">random_state&nbsp;</td>
-<td class="value">123</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">verbose&nbsp;</td>
-<td class="value">0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">warm_start&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">ccp_alpha&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_samples&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">monotonic_cst&nbsp;</td>
-<td class="value">None</td>
-</tr>
-</tbody>
-</table>
-
-            </details>
-        </div>
-    </div></div></div></div></div><script>function copyToClipboard(text, element) {
-    // Get the parameter prefix from the closest toggleable content
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const fullParamName = paramPrefix ? `${paramPrefix}${text}` : text;
-
-    const originalStyle = element.style;
-    const computedStyle = window.getComputedStyle(element);
-    const originalWidth = computedStyle.width;
-    const originalHTML = element.innerHTML.replace('Copied!', '');
-
-    navigator.clipboard.writeText(fullParamName)
-        .then(() => {
-            element.style.width = originalWidth;
-            element.style.color = 'green';
-            element.innerHTML = "Copied!";
-
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        })
-        .catch(err => {
-            console.error('Failed to copy:', err);
-            element.style.color = 'red';
-            element.innerHTML = "Failed!";
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        });
-    return false;
-}
-
-document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const paramName = element.parentElement.nextElementSibling.textContent.trim();
-    const fullParamName = paramPrefix ? `${paramPrefix}${paramName}` : paramName;
-
-    element.setAttribute('title', fullParamName);
-});
-</script>
+</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=1, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked=""><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>RandomForestRegressor(max_features=3, n_estimators=1, random_state=123)</pre></div> </div></div></div></div>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>rf_5.fit(X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>rf_5.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <style>#sk-container-id-2 {
   /* Definition of color scheme common for light and dark mode */
@@ -1046,7 +841,9 @@ clickable and can be expanded/collapsed.
 /* Toggleable content - dropdown */
 
 #sk-container-id-2 div.sk-toggleable__content {
-  display: none;
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
   text-align: left;
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
@@ -1072,9 +869,9 @@ clickable and can be expanded/collapsed.
 
 #sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
-  display: block;
-  width: 100%;
-  overflow: visible;
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
 }
 
 #sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
@@ -1279,217 +1076,9 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-
-.estimator-table summary {
-    padding: .5rem;
-    font-family: monospace;
-    cursor: pointer;
-}
-
-.estimator-table details[open] {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
-    padding-bottom: 0.3rem;
-}
-
-.estimator-table .parameters-table {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.estimator-table .parameters-table tr:nth-child(odd) {
-    background-color: #fff;
-}
-
-.estimator-table .parameters-table tr:nth-child(even) {
-    background-color: #f6f6f6;
-}
-
-.estimator-table .parameters-table tr:hover {
-    background-color: #e0e0e0;
-}
-
-.estimator-table table td {
-    border: 1px solid rgba(106, 105, 104, 0.232);
-}
-
-.user-set td {
-    color:rgb(255, 94, 0);
-    text-align: left;
-}
-
-.user-set td.value pre {
-    color:rgb(255, 94, 0) !important;
-    background-color: transparent !important;
-}
-
-.default td {
-    color: black;
-    text-align: left;
-}
-
-.user-set td i,
-.default td i {
-    color: black;
-}
-
-.copy-paste-icon {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTIwOCAwTDMzMi4xIDBjMTIuNyAwIDI0LjkgNS4xIDMzLjkgMTQuMWw2Ny45IDY3LjljOSA5IDE0LjEgMjEuMiAxNC4xIDMzLjlMNDQ4IDMzNmMwIDI2LjUtMjEuNSA0OC00OCA0OGwtMTkyIDBjLTI2LjUgMC00OC0yMS41LTQ4LTQ4bDAtMjg4YzAtMjYuNSAyMS41LTQ4IDQ4LTQ4ek00OCAxMjhsODAgMCAwIDY0LTY0IDAgMCAyNTYgMTkyIDAgMC0zMiA2NCAwIDAgNDhjMCAyNi41LTIxLjUgNDgtNDggNDhMNDggNTEyYy0yNi41IDAtNDgtMjEuNS00OC00OEwwIDE3NmMwLTI2LjUgMjEuNS00OCA0OC00OHoiLz48L3N2Zz4=);
-    background-repeat: no-repeat;
-    background-size: 14px 14px;
-    background-position: 0;
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    cursor: pointer;
-}
-</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=5, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked=""><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
-        <div class="estimator-table">
-            <details>
-                <summary>Parameters</summary>
-                
-<table class="parameters-table caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<tbody>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">n_estimators&nbsp;</td>
-<td class="value">5</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">criterion&nbsp;</td>
-<td class="value">'squared_error'</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_depth&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_samples_split&nbsp;</td>
-<td class="value">2</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_samples_leaf&nbsp;</td>
-<td class="value">1</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_weight_fraction_leaf&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">max_features&nbsp;</td>
-<td class="value">3</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">max_leaf_nodes&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_impurity_decrease&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">bootstrap&nbsp;</td>
-<td class="value">True</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">oob_score&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">n_jobs&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">random_state&nbsp;</td>
-<td class="value">123</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">verbose&nbsp;</td>
-<td class="value">0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">warm_start&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">ccp_alpha&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_samples&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">monotonic_cst&nbsp;</td>
-<td class="value">None</td>
-</tr>
-</tbody>
-</table>
-
-            </details>
-        </div>
-    </div></div></div></div></div><script>function copyToClipboard(text, element) {
-    // Get the parameter prefix from the closest toggleable content
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const fullParamName = paramPrefix ? `${paramPrefix}${text}` : text;
-
-    const originalStyle = element.style;
-    const computedStyle = window.getComputedStyle(element);
-    const originalWidth = computedStyle.width;
-    const originalHTML = element.innerHTML.replace('Copied!', '');
-
-    navigator.clipboard.writeText(fullParamName)
-        .then(() => {
-            element.style.width = originalWidth;
-            element.style.color = 'green';
-            element.innerHTML = "Copied!";
-
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        })
-        .catch(err => {
-            console.error('Failed to copy:', err);
-            element.style.color = 'red';
-            element.innerHTML = "Failed!";
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        });
-    return false;
-}
-
-document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const paramName = element.parentElement.nextElementSibling.textContent.trim();
-    const fullParamName = paramPrefix ? `${paramPrefix}${paramName}` : paramName;
-
-    element.setAttribute('title', fullParamName);
-});
-</script>
+</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=5, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked=""><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>RandomForestRegressor(max_features=3, n_estimators=5, random_state=123)</pre></div> </div></div></div></div>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>rf_25.fit(X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>rf_25.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <style>#sk-container-id-3 {
   /* Definition of color scheme common for light and dark mode */
@@ -1671,7 +1260,9 @@ clickable and can be expanded/collapsed.
 /* Toggleable content - dropdown */
 
 #sk-container-id-3 div.sk-toggleable__content {
-  display: none;
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
   text-align: left;
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
@@ -1697,9 +1288,9 @@ clickable and can be expanded/collapsed.
 
 #sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
-  display: block;
-  width: 100%;
-  overflow: visible;
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
 }
 
 #sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
@@ -1904,217 +1495,9 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-
-.estimator-table summary {
-    padding: .5rem;
-    font-family: monospace;
-    cursor: pointer;
-}
-
-.estimator-table details[open] {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
-    padding-bottom: 0.3rem;
-}
-
-.estimator-table .parameters-table {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.estimator-table .parameters-table tr:nth-child(odd) {
-    background-color: #fff;
-}
-
-.estimator-table .parameters-table tr:nth-child(even) {
-    background-color: #f6f6f6;
-}
-
-.estimator-table .parameters-table tr:hover {
-    background-color: #e0e0e0;
-}
-
-.estimator-table table td {
-    border: 1px solid rgba(106, 105, 104, 0.232);
-}
-
-.user-set td {
-    color:rgb(255, 94, 0);
-    text-align: left;
-}
-
-.user-set td.value pre {
-    color:rgb(255, 94, 0) !important;
-    background-color: transparent !important;
-}
-
-.default td {
-    color: black;
-    text-align: left;
-}
-
-.user-set td i,
-.default td i {
-    color: black;
-}
-
-.copy-paste-icon {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTIwOCAwTDMzMi4xIDBjMTIuNyAwIDI0LjkgNS4xIDMzLjkgMTQuMWw2Ny45IDY3LjljOSA5IDE0LjEgMjEuMiAxNC4xIDMzLjlMNDQ4IDMzNmMwIDI2LjUtMjEuNSA0OC00OCA0OGwtMTkyIDBjLTI2LjUgMC00OC0yMS41LTQ4LTQ4bDAtMjg4YzAtMjYuNSAyMS41LTQ4IDQ4LTQ4ek00OCAxMjhsODAgMCAwIDY0LTY0IDAgMCAyNTYgMTkyIDAgMC0zMiA2NCAwIDAgNDhjMCAyNi41LTIxLjUgNDgtNDggNDhMNDggNTEyYy0yNi41IDAtNDgtMjEuNS00OC00OEwwIDE3NmMwLTI2LjUgMjEuNS00OCA0OC00OHoiLz48L3N2Zz4=);
-    background-repeat: no-repeat;
-    background-size: 14px 14px;
-    background-position: 0;
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    cursor: pointer;
-}
-</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=25, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" checked=""><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
-        <div class="estimator-table">
-            <details>
-                <summary>Parameters</summary>
-                
-<table class="parameters-table caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<tbody>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">n_estimators&nbsp;</td>
-<td class="value">25</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">criterion&nbsp;</td>
-<td class="value">'squared_error'</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_depth&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_samples_split&nbsp;</td>
-<td class="value">2</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_samples_leaf&nbsp;</td>
-<td class="value">1</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_weight_fraction_leaf&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">max_features&nbsp;</td>
-<td class="value">3</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">max_leaf_nodes&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_impurity_decrease&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">bootstrap&nbsp;</td>
-<td class="value">True</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">oob_score&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">n_jobs&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">random_state&nbsp;</td>
-<td class="value">123</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">verbose&nbsp;</td>
-<td class="value">0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">warm_start&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">ccp_alpha&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_samples&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">monotonic_cst&nbsp;</td>
-<td class="value">None</td>
-</tr>
-</tbody>
-</table>
-
-            </details>
-        </div>
-    </div></div></div></div></div><script>function copyToClipboard(text, element) {
-    // Get the parameter prefix from the closest toggleable content
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const fullParamName = paramPrefix ? `${paramPrefix}${text}` : text;
-
-    const originalStyle = element.style;
-    const computedStyle = window.getComputedStyle(element);
-    const originalWidth = computedStyle.width;
-    const originalHTML = element.innerHTML.replace('Copied!', '');
-
-    navigator.clipboard.writeText(fullParamName)
-        .then(() => {
-            element.style.width = originalWidth;
-            element.style.color = 'green';
-            element.innerHTML = "Copied!";
-
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        })
-        .catch(err => {
-            console.error('Failed to copy:', err);
-            element.style.color = 'red';
-            element.innerHTML = "Failed!";
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        });
-    return false;
-}
-
-document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const paramName = element.parentElement.nextElementSibling.textContent.trim();
-    const fullParamName = paramPrefix ? `${paramPrefix}${paramName}` : paramName;
-
-    element.setAttribute('title', fullParamName);
-});
-</script>
+</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=25, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" checked=""><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>RandomForestRegressor(max_features=3, n_estimators=25, random_state=123)</pre></div> </div></div></div></div>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>rf_100.fit(X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>rf_100.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <style>#sk-container-id-4 {
   /* Definition of color scheme common for light and dark mode */
@@ -2296,7 +1679,9 @@ clickable and can be expanded/collapsed.
 /* Toggleable content - dropdown */
 
 #sk-container-id-4 div.sk-toggleable__content {
-  display: none;
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
   text-align: left;
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
@@ -2322,9 +1707,9 @@ clickable and can be expanded/collapsed.
 
 #sk-container-id-4 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
-  display: block;
-  width: 100%;
-  overflow: visible;
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
 }
 
 #sk-container-id-4 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
@@ -2529,217 +1914,9 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-
-.estimator-table summary {
-    padding: .5rem;
-    font-family: monospace;
-    cursor: pointer;
-}
-
-.estimator-table details[open] {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
-    padding-bottom: 0.3rem;
-}
-
-.estimator-table .parameters-table {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.estimator-table .parameters-table tr:nth-child(odd) {
-    background-color: #fff;
-}
-
-.estimator-table .parameters-table tr:nth-child(even) {
-    background-color: #f6f6f6;
-}
-
-.estimator-table .parameters-table tr:hover {
-    background-color: #e0e0e0;
-}
-
-.estimator-table table td {
-    border: 1px solid rgba(106, 105, 104, 0.232);
-}
-
-.user-set td {
-    color:rgb(255, 94, 0);
-    text-align: left;
-}
-
-.user-set td.value pre {
-    color:rgb(255, 94, 0) !important;
-    background-color: transparent !important;
-}
-
-.default td {
-    color: black;
-    text-align: left;
-}
-
-.user-set td i,
-.default td i {
-    color: black;
-}
-
-.copy-paste-icon {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTIwOCAwTDMzMi4xIDBjMTIuNyAwIDI0LjkgNS4xIDMzLjkgMTQuMWw2Ny45IDY3LjljOSA5IDE0LjEgMjEuMiAxNC4xIDMzLjlMNDQ4IDMzNmMwIDI2LjUtMjEuNSA0OC00OCA0OGwtMTkyIDBjLTI2LjUgMC00OC0yMS41LTQ4LTQ4bDAtMjg4YzAtMjYuNSAyMS41LTQ4IDQ4LTQ4ek00OCAxMjhsODAgMCAwIDY0LTY0IDAgMCAyNTYgMTkyIDAgMC0zMiA2NCAwIDAgNDhjMCAyNi41LTIxLjUgNDgtNDggNDhMNDggNTEyYy0yNi41IDAtNDgtMjEuNS00OC00OEwwIDE3NmMwLTI2LjUgMjEuNS00OCA0OC00OHoiLz48L3N2Zz4=);
-    background-repeat: no-repeat;
-    background-size: 14px 14px;
-    background-position: 0;
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    cursor: pointer;
-}
-</style><div id="sk-container-id-4" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox" checked=""><label for="sk-estimator-id-4" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
-        <div class="estimator-table">
-            <details>
-                <summary>Parameters</summary>
-                
-<table class="parameters-table caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<tbody>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">n_estimators&nbsp;</td>
-<td class="value">100</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">criterion&nbsp;</td>
-<td class="value">'squared_error'</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_depth&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_samples_split&nbsp;</td>
-<td class="value">2</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_samples_leaf&nbsp;</td>
-<td class="value">1</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_weight_fraction_leaf&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">max_features&nbsp;</td>
-<td class="value">3</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">max_leaf_nodes&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_impurity_decrease&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">bootstrap&nbsp;</td>
-<td class="value">True</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">oob_score&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">n_jobs&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">random_state&nbsp;</td>
-<td class="value">123</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">verbose&nbsp;</td>
-<td class="value">0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">warm_start&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">ccp_alpha&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_samples&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">monotonic_cst&nbsp;</td>
-<td class="value">None</td>
-</tr>
-</tbody>
-</table>
-
-            </details>
-        </div>
-    </div></div></div></div></div><script>function copyToClipboard(text, element) {
-    // Get the parameter prefix from the closest toggleable content
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const fullParamName = paramPrefix ? `${paramPrefix}${text}` : text;
-
-    const originalStyle = element.style;
-    const computedStyle = window.getComputedStyle(element);
-    const originalWidth = computedStyle.width;
-    const originalHTML = element.innerHTML.replace('Copied!', '');
-
-    navigator.clipboard.writeText(fullParamName)
-        .then(() => {
-            element.style.width = originalWidth;
-            element.style.color = 'green';
-            element.innerHTML = "Copied!";
-
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        })
-        .catch(err => {
-            console.error('Failed to copy:', err);
-            element.style.color = 'red';
-            element.innerHTML = "Failed!";
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        });
-    return false;
-}
-
-document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const paramName = element.parentElement.nextElementSibling.textContent.trim();
-    const fullParamName = paramPrefix ? `${paramPrefix}${paramName}` : paramName;
-
-    element.setAttribute('title', fullParamName);
-});
-</script>
+</style><div id="sk-container-id-4" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-4" type="checkbox" checked=""><label for="sk-estimator-id-4" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>RandomForestRegressor(max_features=3, random_state=123)</pre></div> </div></div></div></div>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>rf_500.fit(X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>rf_500.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <style>#sk-container-id-5 {
   /* Definition of color scheme common for light and dark mode */
@@ -2921,7 +2098,9 @@ clickable and can be expanded/collapsed.
 /* Toggleable content - dropdown */
 
 #sk-container-id-5 div.sk-toggleable__content {
-  display: none;
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
   text-align: left;
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
@@ -2947,9 +2126,9 @@ clickable and can be expanded/collapsed.
 
 #sk-container-id-5 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
-  display: block;
-  width: 100%;
-  overflow: visible;
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
 }
 
 #sk-container-id-5 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
@@ -3154,217 +2333,9 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-
-.estimator-table summary {
-    padding: .5rem;
-    font-family: monospace;
-    cursor: pointer;
-}
-
-.estimator-table details[open] {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
-    padding-bottom: 0.3rem;
-}
-
-.estimator-table .parameters-table {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.estimator-table .parameters-table tr:nth-child(odd) {
-    background-color: #fff;
-}
-
-.estimator-table .parameters-table tr:nth-child(even) {
-    background-color: #f6f6f6;
-}
-
-.estimator-table .parameters-table tr:hover {
-    background-color: #e0e0e0;
-}
-
-.estimator-table table td {
-    border: 1px solid rgba(106, 105, 104, 0.232);
-}
-
-.user-set td {
-    color:rgb(255, 94, 0);
-    text-align: left;
-}
-
-.user-set td.value pre {
-    color:rgb(255, 94, 0) !important;
-    background-color: transparent !important;
-}
-
-.default td {
-    color: black;
-    text-align: left;
-}
-
-.user-set td i,
-.default td i {
-    color: black;
-}
-
-.copy-paste-icon {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTIwOCAwTDMzMi4xIDBjMTIuNyAwIDI0LjkgNS4xIDMzLjkgMTQuMWw2Ny45IDY3LjljOSA5IDE0LjEgMjEuMiAxNC4xIDMzLjlMNDQ4IDMzNmMwIDI2LjUtMjEuNSA0OC00OCA0OGwtMTkyIDBjLTI2LjUgMC00OC0yMS41LTQ4LTQ4bDAtMjg4YzAtMjYuNSAyMS41LTQ4IDQ4LTQ4ek00OCAxMjhsODAgMCAwIDY0LTY0IDAgMCAyNTYgMTkyIDAgMC0zMiA2NCAwIDAgNDhjMCAyNi41LTIxLjUgNDgtNDggNDhMNDggNTEyYy0yNi41IDAtNDgtMjEuNS00OC00OEwwIDE3NmMwLTI2LjUgMjEuNS00OCA0OC00OHoiLz48L3N2Zz4=);
-    background-repeat: no-repeat;
-    background-size: 14px 14px;
-    background-position: 0;
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    cursor: pointer;
-}
-</style><div id="sk-container-id-5" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=500, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-5" type="checkbox" checked=""><label for="sk-estimator-id-5" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
-        <div class="estimator-table">
-            <details>
-                <summary>Parameters</summary>
-                
-<table class="parameters-table caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<tbody>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">n_estimators&nbsp;</td>
-<td class="value">500</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">criterion&nbsp;</td>
-<td class="value">'squared_error'</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_depth&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_samples_split&nbsp;</td>
-<td class="value">2</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_samples_leaf&nbsp;</td>
-<td class="value">1</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_weight_fraction_leaf&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">max_features&nbsp;</td>
-<td class="value">3</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">max_leaf_nodes&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_impurity_decrease&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">bootstrap&nbsp;</td>
-<td class="value">True</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">oob_score&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">n_jobs&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">random_state&nbsp;</td>
-<td class="value">123</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">verbose&nbsp;</td>
-<td class="value">0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">warm_start&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">ccp_alpha&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_samples&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">monotonic_cst&nbsp;</td>
-<td class="value">None</td>
-</tr>
-</tbody>
-</table>
-
-            </details>
-        </div>
-    </div></div></div></div></div><script>function copyToClipboard(text, element) {
-    // Get the parameter prefix from the closest toggleable content
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const fullParamName = paramPrefix ? `${paramPrefix}${text}` : text;
-
-    const originalStyle = element.style;
-    const computedStyle = window.getComputedStyle(element);
-    const originalWidth = computedStyle.width;
-    const originalHTML = element.innerHTML.replace('Copied!', '');
-
-    navigator.clipboard.writeText(fullParamName)
-        .then(() => {
-            element.style.width = originalWidth;
-            element.style.color = 'green';
-            element.innerHTML = "Copied!";
-
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        })
-        .catch(err => {
-            console.error('Failed to copy:', err);
-            element.style.color = 'red';
-            element.innerHTML = "Failed!";
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        });
-    return false;
-}
-
-document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const paramName = element.parentElement.nextElementSibling.textContent.trim();
-    const fullParamName = paramPrefix ? `${paramPrefix}${paramName}` : paramName;
-
-    element.setAttribute('title', fullParamName);
-});
-</script>
+</style><div id="sk-container-id-5" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=500, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-5" type="checkbox" checked=""><label for="sk-estimator-id-5" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>RandomForestRegressor(max_features=3, n_estimators=500, random_state=123)</pre></div> </div></div></div></div>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>rf_1000.fit(X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>rf_1000.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <style>#sk-container-id-6 {
   /* Definition of color scheme common for light and dark mode */
@@ -3546,7 +2517,9 @@ clickable and can be expanded/collapsed.
 /* Toggleable content - dropdown */
 
 #sk-container-id-6 div.sk-toggleable__content {
-  display: none;
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
   text-align: left;
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
@@ -3572,9 +2545,9 @@ clickable and can be expanded/collapsed.
 
 #sk-container-id-6 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
-  display: block;
-  width: 100%;
-  overflow: visible;
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
 }
 
 #sk-container-id-6 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
@@ -3779,217 +2752,9 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-
-.estimator-table summary {
-    padding: .5rem;
-    font-family: monospace;
-    cursor: pointer;
-}
-
-.estimator-table details[open] {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
-    padding-bottom: 0.3rem;
-}
-
-.estimator-table .parameters-table {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.estimator-table .parameters-table tr:nth-child(odd) {
-    background-color: #fff;
-}
-
-.estimator-table .parameters-table tr:nth-child(even) {
-    background-color: #f6f6f6;
-}
-
-.estimator-table .parameters-table tr:hover {
-    background-color: #e0e0e0;
-}
-
-.estimator-table table td {
-    border: 1px solid rgba(106, 105, 104, 0.232);
-}
-
-.user-set td {
-    color:rgb(255, 94, 0);
-    text-align: left;
-}
-
-.user-set td.value pre {
-    color:rgb(255, 94, 0) !important;
-    background-color: transparent !important;
-}
-
-.default td {
-    color: black;
-    text-align: left;
-}
-
-.user-set td i,
-.default td i {
-    color: black;
-}
-
-.copy-paste-icon {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTIwOCAwTDMzMi4xIDBjMTIuNyAwIDI0LjkgNS4xIDMzLjkgMTQuMWw2Ny45IDY3LjljOSA5IDE0LjEgMjEuMiAxNC4xIDMzLjlMNDQ4IDMzNmMwIDI2LjUtMjEuNSA0OC00OCA0OGwtMTkyIDBjLTI2LjUgMC00OC0yMS41LTQ4LTQ4bDAtMjg4YzAtMjYuNSAyMS41LTQ4IDQ4LTQ4ek00OCAxMjhsODAgMCAwIDY0LTY0IDAgMCAyNTYgMTkyIDAgMC0zMiA2NCAwIDAgNDhjMCAyNi41LTIxLjUgNDgtNDggNDhMNDggNTEyYy0yNi41IDAtNDgtMjEuNS00OC00OEwwIDE3NmMwLTI2LjUgMjEuNS00OCA0OC00OHoiLz48L3N2Zz4=);
-    background-repeat: no-repeat;
-    background-size: 14px 14px;
-    background-position: 0;
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    cursor: pointer;
-}
-</style><div id="sk-container-id-6" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=1000, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-6" type="checkbox" checked=""><label for="sk-estimator-id-6" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
-        <div class="estimator-table">
-            <details>
-                <summary>Parameters</summary>
-                
-<table class="parameters-table caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<tbody>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">n_estimators&nbsp;</td>
-<td class="value">1000</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">criterion&nbsp;</td>
-<td class="value">'squared_error'</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_depth&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_samples_split&nbsp;</td>
-<td class="value">2</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_samples_leaf&nbsp;</td>
-<td class="value">1</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_weight_fraction_leaf&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">max_features&nbsp;</td>
-<td class="value">3</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">max_leaf_nodes&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_impurity_decrease&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">bootstrap&nbsp;</td>
-<td class="value">True</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">oob_score&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">n_jobs&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">random_state&nbsp;</td>
-<td class="value">123</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">verbose&nbsp;</td>
-<td class="value">0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">warm_start&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">ccp_alpha&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_samples&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">monotonic_cst&nbsp;</td>
-<td class="value">None</td>
-</tr>
-</tbody>
-</table>
-
-            </details>
-        </div>
-    </div></div></div></div></div><script>function copyToClipboard(text, element) {
-    // Get the parameter prefix from the closest toggleable content
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const fullParamName = paramPrefix ? `${paramPrefix}${text}` : text;
-
-    const originalStyle = element.style;
-    const computedStyle = window.getComputedStyle(element);
-    const originalWidth = computedStyle.width;
-    const originalHTML = element.innerHTML.replace('Copied!', '');
-
-    navigator.clipboard.writeText(fullParamName)
-        .then(() => {
-            element.style.width = originalWidth;
-            element.style.color = 'green';
-            element.innerHTML = "Copied!";
-
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        })
-        .catch(err => {
-            console.error('Failed to copy:', err);
-            element.style.color = 'red';
-            element.innerHTML = "Failed!";
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        });
-    return false;
-}
-
-document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const paramName = element.parentElement.nextElementSibling.textContent.trim();
-    const fullParamName = paramPrefix ? `${paramPrefix}${paramName}` : paramName;
-
-    element.setAttribute('title', fullParamName);
-});
-</script>
+</style><div id="sk-container-id-6" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=1000, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-6" type="checkbox" checked=""><label for="sk-estimator-id-6" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>RandomForestRegressor(max_features=3, n_estimators=1000, random_state=123)</pre></div> </div></div></div></div>
 </div>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>rf_2000.fit(X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>rf_2000.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <style>#sk-container-id-7 {
   /* Definition of color scheme common for light and dark mode */
@@ -4171,7 +2936,9 @@ clickable and can be expanded/collapsed.
 /* Toggleable content - dropdown */
 
 #sk-container-id-7 div.sk-toggleable__content {
-  display: none;
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
   text-align: left;
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
@@ -4197,9 +2964,9 @@ clickable and can be expanded/collapsed.
 
 #sk-container-id-7 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
-  display: block;
-  width: 100%;
-  overflow: visible;
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
 }
 
 #sk-container-id-7 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
@@ -4404,217 +3171,9 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-
-.estimator-table summary {
-    padding: .5rem;
-    font-family: monospace;
-    cursor: pointer;
-}
-
-.estimator-table details[open] {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
-    padding-bottom: 0.3rem;
-}
-
-.estimator-table .parameters-table {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.estimator-table .parameters-table tr:nth-child(odd) {
-    background-color: #fff;
-}
-
-.estimator-table .parameters-table tr:nth-child(even) {
-    background-color: #f6f6f6;
-}
-
-.estimator-table .parameters-table tr:hover {
-    background-color: #e0e0e0;
-}
-
-.estimator-table table td {
-    border: 1px solid rgba(106, 105, 104, 0.232);
-}
-
-.user-set td {
-    color:rgb(255, 94, 0);
-    text-align: left;
-}
-
-.user-set td.value pre {
-    color:rgb(255, 94, 0) !important;
-    background-color: transparent !important;
-}
-
-.default td {
-    color: black;
-    text-align: left;
-}
-
-.user-set td i,
-.default td i {
-    color: black;
-}
-
-.copy-paste-icon {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTIwOCAwTDMzMi4xIDBjMTIuNyAwIDI0LjkgNS4xIDMzLjkgMTQuMWw2Ny45IDY3LjljOSA5IDE0LjEgMjEuMiAxNC4xIDMzLjlMNDQ4IDMzNmMwIDI2LjUtMjEuNSA0OC00OCA0OGwtMTkyIDBjLTI2LjUgMC00OC0yMS41LTQ4LTQ4bDAtMjg4YzAtMjYuNSAyMS41LTQ4IDQ4LTQ4ek00OCAxMjhsODAgMCAwIDY0LTY0IDAgMCAyNTYgMTkyIDAgMC0zMiA2NCAwIDAgNDhjMCAyNi41LTIxLjUgNDgtNDggNDhMNDggNTEyYy0yNi41IDAtNDgtMjEuNS00OC00OEwwIDE3NmMwLTI2LjUgMjEuNS00OCA0OC00OHoiLz48L3N2Zz4=);
-    background-repeat: no-repeat;
-    background-size: 14px 14px;
-    background-position: 0;
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    cursor: pointer;
-}
-</style><div id="sk-container-id-7" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=2000, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-7" type="checkbox" checked=""><label for="sk-estimator-id-7" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
-        <div class="estimator-table">
-            <details>
-                <summary>Parameters</summary>
-                
-<table class="parameters-table caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<tbody>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">n_estimators&nbsp;</td>
-<td class="value">2000</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">criterion&nbsp;</td>
-<td class="value">'squared_error'</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_depth&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_samples_split&nbsp;</td>
-<td class="value">2</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_samples_leaf&nbsp;</td>
-<td class="value">1</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_weight_fraction_leaf&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">max_features&nbsp;</td>
-<td class="value">3</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">max_leaf_nodes&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_impurity_decrease&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">bootstrap&nbsp;</td>
-<td class="value">True</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">oob_score&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">n_jobs&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">random_state&nbsp;</td>
-<td class="value">123</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">verbose&nbsp;</td>
-<td class="value">0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">warm_start&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">ccp_alpha&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_samples&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">monotonic_cst&nbsp;</td>
-<td class="value">None</td>
-</tr>
-</tbody>
-</table>
-
-            </details>
-        </div>
-    </div></div></div></div></div><script>function copyToClipboard(text, element) {
-    // Get the parameter prefix from the closest toggleable content
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const fullParamName = paramPrefix ? `${paramPrefix}${text}` : text;
-
-    const originalStyle = element.style;
-    const computedStyle = window.getComputedStyle(element);
-    const originalWidth = computedStyle.width;
-    const originalHTML = element.innerHTML.replace('Copied!', '');
-
-    navigator.clipboard.writeText(fullParamName)
-        .then(() => {
-            element.style.width = originalWidth;
-            element.style.color = 'green';
-            element.innerHTML = "Copied!";
-
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        })
-        .catch(err => {
-            console.error('Failed to copy:', err);
-            element.style.color = 'red';
-            element.innerHTML = "Failed!";
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        });
-    return false;
-}
-
-document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const paramName = element.parentElement.nextElementSibling.textContent.trim();
-    const fullParamName = paramPrefix ? `${paramPrefix}${paramName}` : paramName;
-
-    element.setAttribute('title', fullParamName);
-});
-</script>
+</style><div id="sk-container-id-7" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=2000, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-7" type="checkbox" checked=""><label for="sk-estimator-id-7" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>RandomForestRegressor(max_features=3, n_estimators=2000, random_state=123)</pre></div> </div></div></div></div>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>rf_5000.fit(X_train, y_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>rf_5000.fit(X_train, y_train)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <style>#sk-container-id-8 {
   /* Definition of color scheme common for light and dark mode */
@@ -4796,7 +3355,9 @@ clickable and can be expanded/collapsed.
 /* Toggleable content - dropdown */
 
 #sk-container-id-8 div.sk-toggleable__content {
-  display: none;
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
   text-align: left;
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-0);
@@ -4822,9 +3383,9 @@ clickable and can be expanded/collapsed.
 
 #sk-container-id-8 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
-  display: block;
-  width: 100%;
-  overflow: visible;
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
 }
 
 #sk-container-id-8 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
@@ -5029,215 +3590,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-
-.estimator-table summary {
-    padding: .5rem;
-    font-family: monospace;
-    cursor: pointer;
-}
-
-.estimator-table details[open] {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
-    padding-bottom: 0.3rem;
-}
-
-.estimator-table .parameters-table {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.estimator-table .parameters-table tr:nth-child(odd) {
-    background-color: #fff;
-}
-
-.estimator-table .parameters-table tr:nth-child(even) {
-    background-color: #f6f6f6;
-}
-
-.estimator-table .parameters-table tr:hover {
-    background-color: #e0e0e0;
-}
-
-.estimator-table table td {
-    border: 1px solid rgba(106, 105, 104, 0.232);
-}
-
-.user-set td {
-    color:rgb(255, 94, 0);
-    text-align: left;
-}
-
-.user-set td.value pre {
-    color:rgb(255, 94, 0) !important;
-    background-color: transparent !important;
-}
-
-.default td {
-    color: black;
-    text-align: left;
-}
-
-.user-set td i,
-.default td i {
-    color: black;
-}
-
-.copy-paste-icon {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTIwOCAwTDMzMi4xIDBjMTIuNyAwIDI0LjkgNS4xIDMzLjkgMTQuMWw2Ny45IDY3LjljOSA5IDE0LjEgMjEuMiAxNC4xIDMzLjlMNDQ4IDMzNmMwIDI2LjUtMjEuNSA0OC00OCA0OGwtMTkyIDBjLTI2LjUgMC00OC0yMS41LTQ4LTQ4bDAtMjg4YzAtMjYuNSAyMS41LTQ4IDQ4LTQ4ek00OCAxMjhsODAgMCAwIDY0LTY0IDAgMCAyNTYgMTkyIDAgMC0zMiA2NCAwIDAgNDhjMCAyNi41LTIxLjUgNDgtNDggNDhMNDggNTEyYy0yNi41IDAtNDgtMjEuNS00OC00OEwwIDE3NmMwLTI2LjUgMjEuNS00OCA0OC00OHoiLz48L3N2Zz4=);
-    background-repeat: no-repeat;
-    background-size: 14px 14px;
-    background-position: 0;
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    cursor: pointer;
-}
-</style><div id="sk-container-id-8" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=5000, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-8" type="checkbox" checked=""><label for="sk-estimator-id-8" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.7/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
-        <div class="estimator-table">
-            <details>
-                <summary>Parameters</summary>
-                
-<table class="parameters-table caption-top table table-sm table-striped small" data-quarto-postprocess="true">
-<tbody>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">n_estimators&nbsp;</td>
-<td class="value">5000</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">criterion&nbsp;</td>
-<td class="value">'squared_error'</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_depth&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_samples_split&nbsp;</td>
-<td class="value">2</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_samples_leaf&nbsp;</td>
-<td class="value">1</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">min_weight_fraction_leaf&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">max_features&nbsp;</td>
-<td class="value">3</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">max_leaf_nodes&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">min_impurity_decrease&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">bootstrap&nbsp;</td>
-<td class="value">True</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">oob_score&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">n_jobs&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="user-set odd">
-<td><em></em></td>
-<td class="param">random_state&nbsp;</td>
-<td class="value">123</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">verbose&nbsp;</td>
-<td class="value">0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">warm_start&nbsp;</td>
-<td class="value">False</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">ccp_alpha&nbsp;</td>
-<td class="value">0.0</td>
-</tr>
-<tr class="default odd">
-<td><em></em></td>
-<td class="param">max_samples&nbsp;</td>
-<td class="value">None</td>
-</tr>
-<tr class="default even">
-<td><em></em></td>
-<td class="param">monotonic_cst&nbsp;</td>
-<td class="value">None</td>
-</tr>
-</tbody>
-</table>
-
-            </details>
-        </div>
-    </div></div></div></div></div><script>function copyToClipboard(text, element) {
-    // Get the parameter prefix from the closest toggleable content
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const fullParamName = paramPrefix ? `${paramPrefix}${text}` : text;
-
-    const originalStyle = element.style;
-    const computedStyle = window.getComputedStyle(element);
-    const originalWidth = computedStyle.width;
-    const originalHTML = element.innerHTML.replace('Copied!', '');
-
-    navigator.clipboard.writeText(fullParamName)
-        .then(() => {
-            element.style.width = originalWidth;
-            element.style.color = 'green';
-            element.innerHTML = "Copied!";
-
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        })
-        .catch(err => {
-            console.error('Failed to copy:', err);
-            element.style.color = 'red';
-            element.innerHTML = "Failed!";
-            setTimeout(() => {
-                element.innerHTML = originalHTML;
-                element.style = originalStyle;
-            }, 2000);
-        });
-    return false;
-}
-
-document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
-    const toggleableContent = element.closest('.sk-toggleable__content');
-    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
-    const paramName = element.parentElement.nextElementSibling.textContent.trim();
-    const fullParamName = paramPrefix ? `${paramPrefix}${paramName}` : paramName;
-
-    element.setAttribute('title', fullParamName);
-});
-</script>
+</style><div id="sk-container-id-8" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>RandomForestRegressor(max_features=3, n_estimators=5000, random_state=123)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br>On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden=""><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-8" type="checkbox" checked=""><label for="sk-estimator-id-8" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>RandomForestRegressor</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.6/modules/generated/sklearn.ensemble.RandomForestRegressor.html">?<span>Documentation for RandomForestRegressor</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted"><pre>RandomForestRegressor(max_features=3, n_estimators=5000, random_state=123)</pre></div> </div></div></div></div>
 </div>
 </div>
 </div>
@@ -5254,7 +3607,7 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate predictions and performance metrics for test data</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate predictions and performance metrics for test data</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>predictions_1_test <span class="ot">&lt;-</span> <span class="fu">predict</span>(rf_1, test_data)</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>predictions_5_test <span class="ot">&lt;-</span> <span class="fu">predict</span>(rf_5, test_data)</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>predictions_25_test <span class="ot">&lt;-</span> <span class="fu">predict</span>(rf_25, test_data)</span>
@@ -5312,7 +3665,7 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
 <span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a>  <span class="at">R_squared =</span> <span class="fu">c</span>(r2_1, r2_5, r2_25, r2_100, r2_500, r2_1000, r2_2000, r2_5000)</span>
 <span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(performance_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(performance_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Trees RMSE_Test RMSE_Train R_squared
 1     1  42548.89   28137.39 0.7153393
@@ -5328,7 +3681,7 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate predictions for test data</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate predictions for test data</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>predictions_1_test <span class="op">=</span> rf_1.predict(X_test)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>predictions_5_test <span class="op">=</span> rf_5.predict(X_test)</span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>predictions_25_test <span class="op">=</span> rf_25.predict(X_test)</span>
@@ -5386,17 +3739,17 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
 <span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a>performance_df <span class="op">=</span> pd.DataFrame(performance_data)</span>
-<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(performance_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(performance_df)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Trees     RMSE_Test    RMSE_Train  R_squared
-0      1  48915.173827  25868.676052   0.474720
-1      5  36713.731261  14970.364692   0.704089
-2     25  31703.877433  11732.517136   0.779338
-3    100  29883.435196  10794.958719   0.803951
-4    500  29480.013577  10543.752687   0.809209
-5   1000  29485.398882  10476.382036   0.809139
-6   2000  29457.539635  10550.708743   0.809499
-7   5000  29369.918560  10520.683655   0.810631</code></pre>
+0      1  46724.598143  27783.356884   0.520714
+1      5  36356.254862  15229.126246   0.709824
+2     25  31773.670902  11759.471683   0.778365
+3    100  29943.539838  10801.767868   0.803162
+4    500  29475.383099  10548.171137   0.809269
+5   1000  29472.571833  10485.875080   0.809305
+6   2000  29433.335706  10551.699178   0.809812
+7   5000  29345.729852  10520.385575   0.810943</code></pre>
 </div>
 </div>
 </div>
@@ -5417,7 +3770,7 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📊 Visualization Requirements
+<span class="screen-reader-only">Important</span>📊 Visualization Requirements
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5437,7 +3790,7 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📊 Overfitting Analysis Requirements
+<span class="screen-reader-only">Important</span>📊 Overfitting Analysis Requirements
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5461,7 +3814,7 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📊 Comparison Requirements
+<span class="screen-reader-only">Important</span>📊 Comparison Requirements
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5506,7 +3859,7 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📁 Quick Start with Starter Repository
+<span class="screen-reader-only">Important</span>📁 Quick Start with Starter Repository
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5521,7 +3874,7 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-💡 Why Use the Starter Repository?
+<span class="screen-reader-only">Tip</span>💡 Why Use the Starter Repository?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5542,7 +3895,7 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🎯 Navy SEALs Motto
+<span class="screen-reader-only">Note</span>🎯 Navy SEALs Motto
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5558,7 +3911,7 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-💾 Important: Save Your Work Frequently!
+<span class="screen-reader-only">Warning</span>💾 Important: Save Your Work Frequently!
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5590,7 +3943,7 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📊 What You’re Really Being Graded On
+<span class="screen-reader-only">Important</span>📊 What You’re Really Being Graded On
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -5675,6 +4028,263 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
 <li><label><input type="checkbox">Well-designed visualizations that support your analysis</label></li>
 </ul>
 </section>
+<section id="power-of-more-trees-my-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="power-of-more-trees-my-analysis">🌲 Power of More Trees: My Analysis</h2>
+<p>In this section, I explored how the number of trees in a Random Forest model affects prediction accuracy. Using the Ames Housing dataset, I compared results across different forest sizes.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure needed packages (no prompts)</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (p <span class="cf">in</span> <span class="fu">c</span>(<span class="st">"randomForest"</span>, <span class="st">"ggplot2"</span>, <span class="st">"AmesHousing"</span>)) {</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(p, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(p, <span class="at">repos =</span> <span class="st">"https://cloud.r-project.org"</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(randomForest)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Try to load the Ames CSV if it's in the repo; otherwise fall back to packaged data</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>candidates <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"index_files/data/ames_train.csv"</span>,</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/ames_train.csv"</span>,</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"index_files/ames_train.csv"</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (p <span class="cf">in</span> candidates) <span class="cf">if</span> (<span class="fu">file.exists</span>(p)) { path <span class="ot">&lt;-</span> p; <span class="cf">break</span> }</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="fu">is.null</span>(path)) {</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> AmesHousing<span class="sc">::</span><span class="fu">make_ames</span>()     <span class="co"># fallback, always available after install</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">names</span>(df)[<span class="fu">names</span>(df) <span class="sc">==</span> <span class="st">"Sale_Price"</span>] <span class="ot">&lt;-</span> <span class="st">"Sale_Price"</span></span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(path)</span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep numeric predictors only for a fast/robust demo</span></span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df[<span class="sc">!</span><span class="fu">is.na</span>(df<span class="sc">$</span>Sale_Price), ]</span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>nums <span class="ot">&lt;-</span> <span class="fu">sapply</span>(df, is.numeric); nums[<span class="st">"Sale_Price"</span>] <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>df_num <span class="ot">&lt;-</span> df[, nums]</span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>rf_50  <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(Sale_Price <span class="sc">~</span> ., <span class="at">data =</span> df_num, <span class="at">ntree =</span> <span class="dv">50</span>)</span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>rf_200 <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(Sale_Price <span class="sc">~</span> ., <span class="at">data =</span> df_num, <span class="at">ntree =</span> <span class="dv">200</span>)</span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>rf_500 <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(Sale_Price <span class="sc">~</span> ., <span class="at">data =</span> df_num, <span class="at">ntree =</span> <span class="dv">500</span>)</span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a><span class="co"># For regression forests, use OOB MSE from the `mse` vector</span></span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>oob_errors <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>  <span class="at">Trees     =</span> <span class="fu">c</span>(<span class="dv">50</span>, <span class="dv">200</span>, <span class="dv">500</span>),</span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>  <span class="at">OOB_Error =</span> <span class="fu">c</span>(rf_50<span class="sc">$</span>mse[<span class="dv">50</span>], rf_200<span class="sc">$</span>mse[<span class="dv">200</span>], rf_500<span class="sc">$</span>mse[<span class="dv">500</span>])</span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(oob_errors, <span class="fu">aes</span>(<span class="at">x =</span> Trees, <span class="at">y =</span> OOB_Error)) <span class="sc">+</span></span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Effect of Number of Trees on Random Forest (OOB MSE)"</span>,</span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Number of Trees"</span>, <span class="at">y =</span> <span class="st">"Out-of-Bag Mean Squared Error"</span>) <span class="sc">+</span></span>
+<span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Core finding. As the number of trees increases from 50 to 200, out-of-bag error drops sharply. Going from 200 to 500 trees still helps, but the gain is much smaller. This shows the random forest “more trees → better generalization” pattern with clear diminishing returns after a few hundred trees. For this dataset, 200–500 trees looks like a good accuracy-vs-complexity trade-off.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reuse oob_errors from the plot cell</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>oob_tbl <span class="ot">&lt;-</span> oob_errors</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>oob_tbl<span class="sc">$</span>Improvement_vs_prev_pct <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="cn">NA</span>,</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="dv">100</span> <span class="sc">*</span> (oob_tbl<span class="sc">$</span>OOB_Error[<span class="dv">1</span>] <span class="sc">-</span> oob_tbl<span class="sc">$</span>OOB_Error[<span class="dv">2</span>]) <span class="sc">/</span> oob_tbl<span class="sc">$</span>OOB_Error[<span class="dv">1</span>],</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="dv">100</span> <span class="sc">*</span> (oob_tbl<span class="sc">$</span>OOB_Error[<span class="dv">2</span>] <span class="sc">-</span> oob_tbl<span class="sc">$</span>OOB_Error[<span class="dv">3</span>]) <span class="sc">/</span> oob_tbl<span class="sc">$</span>OOB_Error[<span class="dv">2</span>]</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>oob_tbl<span class="sc">$</span>Improvement_vs_50_pct <span class="ot">&lt;-</span> <span class="dv">100</span> <span class="sc">*</span> (oob_tbl<span class="sc">$</span>OOB_Error[<span class="dv">1</span>] <span class="sc">-</span> oob_tbl<span class="sc">$</span>OOB_Error) <span class="sc">/</span> oob_tbl<span class="sc">$</span>OOB_Error[<span class="dv">1</span>]</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>oob_tbl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Trees OOB_Error Improvement_vs_prev_pct Improvement_vs_50_pct
+1    50 801282517                      NA              0.000000
+2   200 733003236               8.5212494              8.521249
+3   500 728445146               0.6218376              9.090099</code></pre>
+</div>
+</div>
+</section>
+<section id="overfitting-analysis-decision-tree-vs-random-forest" class="level2">
+<h2 class="anchored" data-anchor-id="overfitting-analysis-decision-tree-vs-random-forest">Overfitting Analysis: Decision Tree vs Random Forest</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Packages</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (p <span class="cf">in</span> <span class="fu">c</span>(<span class="st">"rpart"</span>, <span class="st">"ggplot2"</span>, <span class="st">"randomForest"</span>, <span class="st">"AmesHousing"</span>)) {</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(p, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">install.packages</span>(p, <span class="at">repos =</span> <span class="st">"https://cloud.r-project.org"</span>)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rpart)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(randomForest)</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AmesHousing)</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare data</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> AmesHousing<span class="sc">::</span><span class="fu">make_ames</span>()</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df)[<span class="fu">names</span>(df) <span class="sc">==</span> <span class="st">"Sale_Price"</span>] <span class="ot">&lt;-</span> <span class="st">"Sale_Price"</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df[<span class="sc">!</span><span class="fu">is.na</span>(df<span class="sc">$</span>Sale_Price), ]</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>nums <span class="ot">&lt;-</span> <span class="fu">sapply</span>(df, is.numeric); nums[<span class="st">"Sale_Price"</span>] <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>df_num <span class="ot">&lt;-</span> df[, nums]</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(df_num)</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>idx <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">seq_len</span>(n), <span class="at">size =</span> <span class="fu">floor</span>(<span class="fl">0.8</span> <span class="sc">*</span> n))</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> df_num[idx, ]</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>test  <span class="ot">&lt;-</span> df_num[<span class="sc">-</span>idx, ]</span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>rmse <span class="ot">&lt;-</span> <span class="cf">function</span>(y, yhat) <span class="fu">sqrt</span>(<span class="fu">mean</span>((y <span class="sc">-</span> yhat)<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Decision Tree overfitting test</span></span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>depths <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">8</span>,<span class="dv">10</span>,<span class="dv">12</span>)</span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>dt_rows <span class="ot">&lt;-</span> <span class="fu">lapply</span>(depths, <span class="cf">function</span>(d) {</span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>  fit <span class="ot">&lt;-</span> <span class="fu">rpart</span>(Sale_Price <span class="sc">~</span> ., <span class="at">data =</span> train, <span class="at">control =</span> <span class="fu">rpart.control</span>(<span class="at">maxdepth =</span> d, <span class="at">cp =</span> <span class="dv">0</span>))</span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a>  pred_tr <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit, train)</span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a>  pred_te <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit, test)</span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">Model =</span> <span class="st">"Decision Tree"</span>, <span class="at">Complexity =</span> d,</span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>             <span class="at">Metric =</span> <span class="fu">c</span>(<span class="st">"Train RMSE"</span>,<span class="st">"Test RMSE"</span>),</span>
+<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a>             <span class="at">Value =</span> <span class="fu">c</span>(<span class="fu">rmse</span>(train<span class="sc">$</span>Sale_Price, pred_tr), <span class="fu">rmse</span>(test<span class="sc">$</span>Sale_Price, pred_te)))</span>
+<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a>dt_df <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, dt_rows)</span>
+<span id="cb21-36"><a href="#cb21-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-37"><a href="#cb21-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Random Forest comparison</span></span>
+<span id="cb21-38"><a href="#cb21-38" aria-hidden="true" tabindex="-1"></a>trees <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">50</span>,<span class="dv">100</span>,<span class="dv">200</span>,<span class="dv">500</span>)</span>
+<span id="cb21-39"><a href="#cb21-39" aria-hidden="true" tabindex="-1"></a>rf_rows <span class="ot">&lt;-</span> <span class="fu">lapply</span>(trees, <span class="cf">function</span>(m) {</span>
+<span id="cb21-40"><a href="#cb21-40" aria-hidden="true" tabindex="-1"></a>  fit <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(Sale_Price <span class="sc">~</span> ., <span class="at">data =</span> train, <span class="at">ntree =</span> m)</span>
+<span id="cb21-41"><a href="#cb21-41" aria-hidden="true" tabindex="-1"></a>  pred_tr <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit, train)</span>
+<span id="cb21-42"><a href="#cb21-42" aria-hidden="true" tabindex="-1"></a>  pred_te <span class="ot">&lt;-</span> <span class="fu">predict</span>(fit, test)</span>
+<span id="cb21-43"><a href="#cb21-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">Model =</span> <span class="st">"Random Forest"</span>, <span class="at">Complexity =</span> m,</span>
+<span id="cb21-44"><a href="#cb21-44" aria-hidden="true" tabindex="-1"></a>             <span class="at">Metric =</span> <span class="fu">c</span>(<span class="st">"Train RMSE"</span>,<span class="st">"Test RMSE"</span>),</span>
+<span id="cb21-45"><a href="#cb21-45" aria-hidden="true" tabindex="-1"></a>             <span class="at">Value =</span> <span class="fu">c</span>(<span class="fu">rmse</span>(train<span class="sc">$</span>Sale_Price, pred_tr), <span class="fu">rmse</span>(test<span class="sc">$</span>Sale_Price, pred_te)))</span>
+<span id="cb21-46"><a href="#cb21-46" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb21-47"><a href="#cb21-47" aria-hidden="true" tabindex="-1"></a>rf_df <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, rf_rows)</span>
+<span id="cb21-48"><a href="#cb21-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-49"><a href="#cb21-49" aria-hidden="true" tabindex="-1"></a>plot_df <span class="ot">&lt;-</span> <span class="fu">rbind</span>(dt_df, rf_df)</span>
+<span id="cb21-50"><a href="#cb21-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-51"><a href="#cb21-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot</span></span>
+<span id="cb21-52"><a href="#cb21-52" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(plot_df, <span class="fu">aes</span>(<span class="at">x =</span> Complexity, <span class="at">y =</span> Value, <span class="at">color =</span> Metric)) <span class="sc">+</span></span>
+<span id="cb21-53"><a href="#cb21-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.1</span>) <span class="sc">+</span></span>
+<span id="cb21-54"><a href="#cb21-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">2.5</span>) <span class="sc">+</span></span>
+<span id="cb21-55"><a href="#cb21-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Model, <span class="at">scales =</span> <span class="st">"free_x"</span>) <span class="sc">+</span></span>
+<span id="cb21-56"><a href="#cb21-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Overfitting: Decision Tree vs Random Forest"</span>,</span>
+<span id="cb21-57"><a href="#cb21-57" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Tree Depth (Decision Tree) or Number of Trees (Random Forest)"</span>,</span>
+<span id="cb21-58"><a href="#cb21-58" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"RMSE"</span>) <span class="sc">+</span></span>
+<span id="cb21-59"><a href="#cb21-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="linear-regression-vs-random-forests" class="level2">
+<h2 class="anchored" data-anchor-id="linear-regression-vs-random-forests">Linear Regression vs Random Forests</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Packages</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (p <span class="cf">in</span> <span class="fu">c</span>(<span class="st">"randomForest"</span>,<span class="st">"ggplot2"</span>,<span class="st">"dplyr"</span>,<span class="st">"knitr"</span>,<span class="st">"AmesHousing"</span>)) {</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(p, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) <span class="fu">install.packages</span>(p, <span class="at">repos =</span> <span class="st">"https://cloud.r-project.org"</span>)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(randomForest); <span class="fu">library</span>(ggplot2); <span class="fu">library</span>(dplyr); <span class="fu">library</span>(knitr); <span class="fu">library</span>(AmesHousing)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Data reuse or build</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">exists</span>(<span class="st">"df_num"</span>)) {</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> AmesHousing<span class="sc">::</span><span class="fu">make_ames</span>()</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">names</span>(df)[<span class="fu">names</span>(df) <span class="sc">==</span> <span class="st">"Sale_Price"</span>] <span class="ot">&lt;-</span> <span class="st">"Sale_Price"</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> df[<span class="sc">!</span><span class="fu">is.na</span>(df<span class="sc">$</span>Sale_Price), ]</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  nums <span class="ot">&lt;-</span> <span class="fu">sapply</span>(df, is.numeric); nums[<span class="st">"Sale_Price"</span>] <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>  df_num <span class="ot">&lt;-</span> df[, nums]</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">exists</span>(<span class="st">"train"</span>) <span class="sc">||</span> <span class="sc">!</span><span class="fu">exists</span>(<span class="st">"test"</span>)) {</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(df_num)</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>  idx <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="fu">seq_len</span>(n), <span class="at">size =</span> <span class="fu">floor</span>(<span class="fl">0.8</span> <span class="sc">*</span> n))</span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>  train <span class="ot">&lt;-</span> df_num[idx, ]</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>  test  <span class="ot">&lt;-</span> df_num[<span class="sc">-</span>idx, ]</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>rmse <span class="ot">&lt;-</span> <span class="cf">function</span>(y, yhat) <span class="fu">sqrt</span>(<span class="fu">mean</span>((y <span class="sc">-</span> yhat)<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Models</span></span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>lm_fit   <span class="ot">&lt;-</span> <span class="fu">lm</span>(Sale_Price <span class="sc">~</span> ., <span class="at">data =</span> train)</span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>rf_1     <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(Sale_Price <span class="sc">~</span> ., <span class="at">data =</span> train, <span class="at">ntree =</span> <span class="dv">1</span>)</span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>rf_100   <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(Sale_Price <span class="sc">~</span> ., <span class="at">data =</span> train, <span class="at">ntree =</span> <span class="dv">100</span>)</span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>rf_1000  <span class="ot">&lt;-</span> <span class="fu">randomForest</span>(Sale_Price <span class="sc">~</span> ., <span class="at">data =</span> train, <span class="at">ntree =</span> <span class="dv">1000</span>)</span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Test RMSE</span></span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a>lm_rmse     <span class="ot">&lt;-</span> <span class="fu">rmse</span>(test<span class="sc">$</span>Sale_Price, <span class="fu">predict</span>(lm_fit,  test))</span>
+<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a>rf1_rmse    <span class="ot">&lt;-</span> <span class="fu">rmse</span>(test<span class="sc">$</span>Sale_Price, <span class="fu">predict</span>(rf_1,    test))</span>
+<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a>rf100_rmse  <span class="ot">&lt;-</span> <span class="fu">rmse</span>(test<span class="sc">$</span>Sale_Price, <span class="fu">predict</span>(rf_100,  test))</span>
+<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a>rf1000_rmse <span class="ot">&lt;-</span> <span class="fu">rmse</span>(test<span class="sc">$</span>Sale_Price, <span class="fu">predict</span>(rf_1000, test))</span>
+<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> tibble<span class="sc">::</span><span class="fu">tibble</span>(</span>
+<span id="cb22-40"><a href="#cb22-40" aria-hidden="true" tabindex="-1"></a>  <span class="at">Model =</span> <span class="fu">c</span>(<span class="st">"Linear Regression"</span>,<span class="st">"Random Forest 1 tree"</span>,<span class="st">"Random Forest 100 trees"</span>,<span class="st">"Random Forest 1000 trees"</span>),</span>
+<span id="cb22-41"><a href="#cb22-41" aria-hidden="true" tabindex="-1"></a>  <span class="at">Test_RMSE =</span> <span class="fu">c</span>(lm_rmse, rf1_rmse, rf100_rmse, rf1000_rmse)</span>
+<span id="cb22-42"><a href="#cb22-42" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb22-43"><a href="#cb22-43" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Improvement_vs_Linear =</span> <span class="dv">100</span><span class="sc">*</span>(<span class="dv">1</span> <span class="sc">-</span> Test_RMSE <span class="sc">/</span> lm_rmse))</span>
+<span id="cb22-44"><a href="#cb22-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-45"><a href="#cb22-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Clear table</span></span>
+<span id="cb22-46"><a href="#cb22-46" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb22-47"><a href="#cb22-47" aria-hidden="true" tabindex="-1"></a>  results <span class="sc">|&gt;</span></span>
+<span id="cb22-48"><a href="#cb22-48" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb22-49"><a href="#cb22-49" aria-hidden="true" tabindex="-1"></a>      <span class="at">Test_RMSE =</span> <span class="fu">round</span>(Test_RMSE, <span class="dv">1</span>),</span>
+<span id="cb22-50"><a href="#cb22-50" aria-hidden="true" tabindex="-1"></a>      <span class="at">Improvement_vs_Linear =</span> <span class="fu">paste0</span>(<span class="fu">round</span>(Improvement_vs_Linear, <span class="dv">1</span>), <span class="st">"%"</span>)</span>
+<span id="cb22-51"><a href="#cb22-51" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb22-52"><a href="#cb22-52" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">"lrr"</span>,</span>
+<span id="cb22-53"><a href="#cb22-53" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Model"</span>,<span class="st">"Test RMSE"</span>,<span class="st">"Improvement over Linear"</span>)</span>
+<span id="cb22-54"><a href="#cb22-54" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Model</th>
+<th style="text-align: right;">Test RMSE</th>
+<th style="text-align: right;">Improvement over Linear</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Linear Regression</td>
+<td style="text-align: right;">37848.6</td>
+<td style="text-align: right;">0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Random Forest 1 tree</td>
+<td style="text-align: right;">47513.2</td>
+<td style="text-align: right;">-25.5%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Random Forest 100 trees</td>
+<td style="text-align: right;">27272.5</td>
+<td style="text-align: right;">27.9%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Random Forest 1000 trees</td>
+<td style="text-align: right;">27024.6</td>
+<td style="text-align: right;">28.6%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Optional simple chart of improvement</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(results <span class="sc">|&gt;</span> <span class="fu">filter</span>(Model <span class="sc">!=</span> <span class="st">"Linear Regression"</span>),</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> Model, <span class="at">y =</span> Improvement_vs_Linear)) <span class="sc">+</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>) <span class="sc">+</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Percent improvement in Test RMSE vs Linear Regression"</span>,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> <span class="st">"Improvement percent"</span>) <span class="sc">+</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="fu">min</span>(<span class="dv">0</span>, <span class="fu">min</span>(results<span class="sc">$</span>Improvement_vs_Linear)), <span class="fu">max</span>(results<span class="sc">$</span>Improvement_vs_Linear)<span class="sc">*</span><span class="fl">1.1</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 </section>
 
 </main>
@@ -5730,13 +4340,14 @@ document.querySelectorAll('.fa-regular.fa-copy').forEach(function(element) {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

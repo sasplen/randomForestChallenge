@@ -1,12 +1,13 @@
 ---
 title: "Random Forest Challenge"
 subtitle: "The Power of Weak Learners"
-format:
-  html: default
+format: html
 execute:
   echo: true
   eval: true
+engine: knitr
 ---
+
 
 # 🌲 Random Forest Challenge - The Power of Weak Learners
 
@@ -529,3 +530,219 @@ Include percentage improvements over linear regression for each random forest mo
 - [ ] Practical insights that would help a real data scientist
 - [ ] Well-designed visualizations that support your analysis
 
+## 🌲 Power of More Trees: My Analysis
+
+In this section, I explored how the number of trees in a Random Forest model affects prediction accuracy. Using the Ames Housing dataset, I compared results across different forest sizes.
+```{r}
+#| echo: true
+#| eval: true
+
+# Ensure needed packages (no prompts)
+for (p in c("randomForest", "ggplot2", "AmesHousing")) {
+  if (!requireNamespace(p, quietly = TRUE)) {
+    install.packages(p, repos = "https://cloud.r-project.org")
+  }
+}
+library(randomForest)
+library(ggplot2)
+
+# Try to load the Ames CSV if it's in the repo; otherwise fall back to packaged data
+candidates <- c(
+  "index_files/data/ames_train.csv",
+  "data/ames_train.csv",
+  "index_files/ames_train.csv"
+)
+path <- NULL
+for (p in candidates) if (file.exists(p)) { path <- p; break }
+
+if (is.null(path)) {
+  df <- AmesHousing::make_ames()     # fallback, always available after install
+  names(df)[names(df) == "Sale_Price"] <- "Sale_Price"
+} else {
+  df <- read.csv(path)
+}
+
+# Keep numeric predictors only for a fast/robust demo
+df <- df[!is.na(df$Sale_Price), ]
+nums <- sapply(df, is.numeric); nums["Sale_Price"] <- TRUE
+df_num <- df[, nums]
+
+set.seed(42)
+rf_50  <- randomForest(Sale_Price ~ ., data = df_num, ntree = 50)
+rf_200 <- randomForest(Sale_Price ~ ., data = df_num, ntree = 200)
+rf_500 <- randomForest(Sale_Price ~ ., data = df_num, ntree = 500)
+
+# For regression forests, use OOB MSE from the `mse` vector
+oob_errors <- data.frame(
+  Trees     = c(50, 200, 500),
+  OOB_Error = c(rf_50$mse[50], rf_200$mse[200], rf_500$mse[500])
+)
+
+ggplot(oob_errors, aes(x = Trees, y = OOB_Error)) +
+  geom_line(linewidth = 1.2) +
+  geom_point(size = 3) +
+  labs(title = "Effect of Number of Trees on Random Forest (OOB MSE)",
+       x = "Number of Trees", y = "Out-of-Bag Mean Squared Error") +
+  theme_minimal()
+```
+
+Core finding. As the number of trees increases from 50 to 200, out-of-bag error drops sharply. Going from 200 to 500 trees still helps, but the gain is much smaller. This shows the random forest “more trees → better generalization” pattern with clear diminishing returns after a few hundred trees. For this dataset, 200–500 trees looks like a good accuracy-vs-complexity trade-off.
+
+
+
+```{r}
+#| echo: true
+# Reuse oob_errors from the plot cell
+oob_tbl <- oob_errors
+oob_tbl$Improvement_vs_prev_pct <- c(
+  NA,
+  100 * (oob_tbl$OOB_Error[1] - oob_tbl$OOB_Error[2]) / oob_tbl$OOB_Error[1],
+  100 * (oob_tbl$OOB_Error[2] - oob_tbl$OOB_Error[3]) / oob_tbl$OOB_Error[2]
+)
+oob_tbl$Improvement_vs_50_pct <- 100 * (oob_tbl$OOB_Error[1] - oob_tbl$OOB_Error) / oob_tbl$OOB_Error[1]
+oob_tbl
+```
+
+**So what.** Going from 50 to 200 trees cuts OOB error a lot. 200 to 500 is a small gain. This shows clear diminishing returns. Pick a tree count that balances accuracy and run time; for this dataset ~200 is a good default.
+
+## Overfitting Analysis: Decision Tree vs Random Forest
+
+```{r}
+#| echo: true
+#| eval: true
+
+# Packages
+for (p in c("rpart", "ggplot2", "randomForest", "AmesHousing")) {
+  if (!requireNamespace(p, quietly = TRUE)) install.packages(p, repos = "https://cloud.r-project.org")
+}
+library(rpart)
+library(ggplot2)
+library(randomForest)
+library(AmesHousing)
+
+# Prepare data
+df <- AmesHousing::make_ames()
+names(df)[names(df) == "Sale_Price"] <- "Sale_Price"
+df <- df[!is.na(df$Sale_Price), ]
+nums <- sapply(df, is.numeric); nums["Sale_Price"] <- TRUE
+df_num <- df[, nums]
+
+set.seed(42)
+n <- nrow(df_num)
+idx <- sample(seq_len(n), size = floor(0.8 * n))
+train <- df_num[idx, ]
+test  <- df_num[-idx, ]
+
+rmse <- function(y, yhat) sqrt(mean((y - yhat)^2))
+
+# Decision Tree overfitting test
+depths <- c(1,2,3,4,5,6,8,10,12)
+dt_rows <- lapply(depths, function(d) {
+  fit <- rpart(Sale_Price ~ ., data = train, control = rpart.control(maxdepth = d, cp = 0))
+  pred_tr <- predict(fit, train)
+  pred_te <- predict(fit, test)
+  data.frame(Model = "Decision Tree", Complexity = d,
+             Metric = c("Train RMSE","Test RMSE"),
+             Value = c(rmse(train$Sale_Price, pred_tr), rmse(test$Sale_Price, pred_te)))
+})
+dt_df <- do.call(rbind, dt_rows)
+
+# Random Forest comparison
+trees <- c(10,50,100,200,500)
+rf_rows <- lapply(trees, function(m) {
+  fit <- randomForest(Sale_Price ~ ., data = train, ntree = m)
+  pred_tr <- predict(fit, train)
+  pred_te <- predict(fit, test)
+  data.frame(Model = "Random Forest", Complexity = m,
+             Metric = c("Train RMSE","Test RMSE"),
+             Value = c(rmse(train$Sale_Price, pred_tr), rmse(test$Sale_Price, pred_te)))
+})
+rf_df <- do.call(rbind, rf_rows)
+
+plot_df <- rbind(dt_df, rf_df)
+
+# Plot
+ggplot(plot_df, aes(x = Complexity, y = Value, color = Metric)) +
+  geom_line(linewidth = 1.1) +
+  geom_point(size = 2.5) +
+  facet_wrap(~ Model, scales = "free_x") +
+  labs(title = "Overfitting: Decision Tree vs Random Forest",
+       x = "Tree Depth (Decision Tree) or Number of Trees (Random Forest)",
+       y = "RMSE") +
+  theme_minimal()
+```
+
+**Why forests resist overfitting.** A single tree fits noise as depth increases, so train RMSE drops while test RMSE rises. A random forest averages many de-correlated trees built on bootstrap samples and feature subsampling, so variance is reduced and test RMSE stays stable as trees increase.
+
+## Linear Regression vs Random Forests
+
+```{r}
+#| echo: true
+#| eval: true
+
+# Packages
+for (p in c("randomForest","ggplot2","dplyr","knitr","AmesHousing")) {
+  if (!requireNamespace(p, quietly = TRUE)) install.packages(p, repos = "https://cloud.r-project.org")
+}
+library(randomForest); library(ggplot2); library(dplyr); library(knitr); library(AmesHousing)
+
+# Data reuse or build
+if (!exists("df_num")) {
+  df <- AmesHousing::make_ames()
+  names(df)[names(df) == "Sale_Price"] <- "Sale_Price"
+  df <- df[!is.na(df$Sale_Price), ]
+  nums <- sapply(df, is.numeric); nums["Sale_Price"] <- TRUE
+  df_num <- df[, nums]
+}
+
+set.seed(42)
+if (!exists("train") || !exists("test")) {
+  n <- nrow(df_num)
+  idx <- sample(seq_len(n), size = floor(0.8 * n))
+  train <- df_num[idx, ]
+  test  <- df_num[-idx, ]
+}
+
+rmse <- function(y, yhat) sqrt(mean((y - yhat)^2))
+
+# Models
+lm_fit   <- lm(Sale_Price ~ ., data = train)
+
+rf_1     <- randomForest(Sale_Price ~ ., data = train, ntree = 1)
+rf_100   <- randomForest(Sale_Price ~ ., data = train, ntree = 100)
+rf_1000  <- randomForest(Sale_Price ~ ., data = train, ntree = 1000)
+
+# Test RMSE
+lm_rmse     <- rmse(test$Sale_Price, predict(lm_fit,  test))
+rf1_rmse    <- rmse(test$Sale_Price, predict(rf_1,    test))
+rf100_rmse  <- rmse(test$Sale_Price, predict(rf_100,  test))
+rf1000_rmse <- rmse(test$Sale_Price, predict(rf_1000, test))
+
+results <- tibble::tibble(
+  Model = c("Linear Regression","Random Forest 1 tree","Random Forest 100 trees","Random Forest 1000 trees"),
+  Test_RMSE = c(lm_rmse, rf1_rmse, rf100_rmse, rf1000_rmse)
+) |>
+  mutate(Improvement_vs_Linear = 100*(1 - Test_RMSE / lm_rmse))
+
+# Clear table
+knitr::kable(
+  results |>
+    mutate(
+      Test_RMSE = round(Test_RMSE, 1),
+      Improvement_vs_Linear = paste0(round(Improvement_vs_Linear, 1), "%")
+    ),
+  align = "lrr",
+  col.names = c("Model","Test RMSE","Improvement over Linear")
+)
+
+# Optional simple chart of improvement
+ggplot(results |> filter(Model != "Linear Regression"),
+       aes(x = Model, y = Improvement_vs_Linear)) +
+  geom_col() +
+  geom_hline(yintercept = 0) +
+  labs(title = "Percent improvement in Test RMSE vs Linear Regression",
+       x = "", y = "Improvement percent") +
+  theme_minimal() +
+  coord_cartesian(ylim = c(min(0, min(results$Improvement_vs_Linear)), max(results$Improvement_vs_Linear)*1.1))
+```
+**When the extra complexity is worth it.** Linear regression is fast and interpretable but assumes linear effects. On this data, 100-tree forests lower test RMSE meaningfully vs linear. Going to 1000 trees helps a bit more but with diminishing returns. Use forests when you expect nonlinearity or interactions and you care more about accuracy than simple coefficients.
