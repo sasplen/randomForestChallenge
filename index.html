@@ -4105,6 +4105,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 3   500 728445146               0.6218376              9.090099</code></pre>
 </div>
 </div>
+<p><strong>So what.</strong> Going from 50 to 200 trees cuts OOB error a lot. 200 to 500 is a small gain. This shows clear diminishing returns. Pick a tree count that balances accuracy and run time; for this dataset ~200 is a good default.</p>
 </section>
 <section id="overfitting-analysis-decision-tree-vs-random-forest" class="level2">
 <h2 class="anchored" data-anchor-id="overfitting-analysis-decision-tree-vs-random-forest">Overfitting Analysis: Decision Tree vs Random Forest</h2>
@@ -4176,6 +4177,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 </div>
 </div>
+<p><strong>Why forests resist overfitting.</strong> A single tree fits noise as depth increases, so train RMSE drops while test RMSE rises. A random forest averages many de-correlated trees built on bootstrap samples and feature subsampling, so variance is reduced and test RMSE stays stable as trees increase.</p>
 </section>
 <section id="linear-regression-vs-random-forests" class="level2">
 <h2 class="anchored" data-anchor-id="linear-regression-vs-random-forests">Linear Regression vs Random Forests</h2>
@@ -4284,6 +4286,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 </div>
 </div>
+<p><strong>When the extra complexity is worth it.</strong> Linear regression is fast and interpretable but assumes linear effects. On this data, 100-tree forests lower test RMSE meaningfully vs linear. Going to 1000 trees helps a bit more but with diminishing returns. Use forests when you expect nonlinearity or interactions and you care more about accuracy than simple coefficients.</p>
 </section>
 </section>
 
