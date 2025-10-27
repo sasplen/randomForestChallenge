@@ -3,7 +3,7 @@
 **The Power of Weak Learners** - A BUAD442 Data Analytics Challenge
 
 ## View the Challenge
-
+Live site: https://sasplen.github.io/randomForestChallenge/
 👉 **See the full challenge at:** [https://flyaflya.github.io/randomForestChallenge/](https://flyaflya.github.io/randomForestChallenge/)
 
 ## Getting Started
